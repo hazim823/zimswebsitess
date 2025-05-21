@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Website - Important Moments</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Times New Roman', sans-serif;
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Fly-In Animation */
+    @keyframes flyIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fly-in {
+      animation: flyIn 1s ease-out both;
+    }
+
+    header {
+      background-color: red;
+      color: black;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      background-color: #444;
+      padding: 10px 15px;
+      text-decoration: none;
+      margin: 0 5px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #ffcc00;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #666;
+      text-align: left;
+    }
+
+    th {
+      background-color: #444;
+      color: #ffcc00;
+    }
+
+    tr:nth-child(even) {
+      background-color: #3d3d3d;
+    }
+
+    tr:hover {
+      background-color: #555;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="fly-in">
+  <h1>Important Moments</h1>
+</header>
+
+<nav class="fly-in" style="animation-delay: 0.3s;">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="hobbies.html">Hobbies</a>
+  <a href="interests.html">Interests</a>
+  <a href="important_moments.html">Important Moments</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section id="important_moments" class="fly-in" style="animation-delay: 0.6s;">
+  <h2>Important Moments</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Moment</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Received an award as one of the "Best Student in 2022/2023 for SPM" in SMK Taman Desa 2.</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Traveled to Scotland</td>
+        <td>2016</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Student Exchange in Surabaya, Indonesia</td>
+        <td>2025</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Learned how to skate</td>
+        <td>2025</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<footer class="fly-in" style="animation-delay: 0.9s;">
+  <p>&copy; Hazim - <span id="year"></span></p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Website - Interests</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Times New Roman, sans-serif;
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background-color: red;
+      color: black;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      margin: 20px 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      background-color: #444;
+      padding: 10px 15px;
+      text-decoration: none;
+      margin: 0 5px;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h2 {
+      color: #ffcc00;
+    }
+    .interest-img {
+      width: 250px;
+      height: 180px;
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 8px;
+      border: 3px solid #ffcc00;
+      transition: transform 0.3s ease;
+    }
+    .interest-img:hover {
+      transform: scale(1.05);
+      border-color: white;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Personal Interests</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="hobbies.html">Hobbies</a>
+  <a href="interests.html">Interests</a>
+  <a href="important_moments.html">Important Moments</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section id="interests">
+  <h2>Personal Interests</h2>
+  <ul>
+    <li>Nature</li>
+    <li>Geography</li>
+    <li>Science</li>
+  </ul>
+  <p>I love learning new things and exploring different places.</p>
+
+  <!-- Interest Photos -->
+  <div>
+    <img src="tree.jpg" alt="tree" class="interest-img">
+    <img src="map.jpg" alt="map" class="interest-img">
+    <img src="science.jpg" alt="Science" class="interest-img">
+  </div>
+</section>
+
+<footer>
+  <p>&copy; Hazim - <span id="year"></span></p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

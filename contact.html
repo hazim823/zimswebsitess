@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Website - Contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* Styles same as index.html */
+    body {
+      font-family: Times New Roman, sans-serif;
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background-color: green;
+      color: black;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      margin: 20px 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      background-color: #444;
+      padding: 10px 15px;
+      text-decoration: none;
+      margin: 0 5px;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #ffcc00;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Contact</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="hobbies.html">Hobbies</a>
+  <a href="interests.html">Interests</a>
+  <a href="important_moments.html">Important Moments</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>You can reach me at <a href="mailto:mohdhazim305@gmail.com">mohdhazim305@gmail.com</a> or connect with me on social media!</p>
+  <div class="social-icons">
+    <a href="https://wa.me/010-9153627" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/hzmothman._" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="tel:‪+60-109153627‬" target="_blank"><i class="fas fa-phone-alt"></i></a>
+    <a href="mailto:mohdhazim305@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; Hazim - <span id="year"></span></p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

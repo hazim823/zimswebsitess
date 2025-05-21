@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Website - Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Times New Roman', sans-serif;
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: pink;
+      color: black;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    nav {
+      margin: 20px 0;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    nav a {
+      color: white;
+      background-color: #444;
+      padding: 10px 15px;
+      text-decoration: none;
+      margin: 0 5px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 2;
+    }
+
+    h2 {
+      color: #FFC0CB;
+    }
+
+    .gallery-img {
+      width: 200px;
+      margin: 10px;
+      border: 4px solid #FFC0CB;
+      border-radius: 10px;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.05);
+      border-color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Floating Hearts */
+    .heart {
+      position: fixed;
+      bottom: -70px;
+      color: pink;
+      font-size: 24px;
+      animation: floatHeart 6s linear infinite;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    @keyframes floatHeart {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Gallery</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="hobbies.html">Hobbies</a>
+  <a href="interests.html">Interests</a>
+  <a href="important_moments.html">Important Moments</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <p>Check out some of my favorite photos and memories!</p>
+  <p>This was the special edition of photos because all the photos was taken in Surabaya!</p>
+  
+  <img src="Photo1.JPG" alt="Photo 1" class="gallery-img">
+  <img src="Photo2.JPG" alt="Photo 2" class="gallery-img">
+  <img src="Photo3.JPG" alt="Photo 3" class="gallery-img">
+  <img src="Photo4.JPG" alt="Photo 4" class="gallery-img">
+  <img src="Photo5.JPG" alt="Photo 5" class="gallery-img">
+  <img src="Photo6.JPG" alt="Photo 6" class="gallery-img">
+  <img src="Photo7.JPG" alt="Photo 7" class="gallery-img">
+  <img src="Photo8.JPG" alt="Photo 8" class="gallery-img">
+  <img src="Photo9.JPG" alt="Photo 9" class="gallery-img">
+  <img src="Photo10.JPG" alt="Photo 10" class="gallery-img">
+  <img src="Photo11.JPG" alt="Photo 11" class="gallery-img">
+  <img src="Photo12.JPG" alt="Photo 12" class="gallery-img">
+</section>
+
+<footer>
+  <p>&copy; Hazim - <span id="year"></span></p>
+</footer>
+
+<!-- Floating Heart Elements -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+
+    // Random position and size
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 10 + 15) + "px";
+
+    // Random depth: behind (z-index 1) or in front (z-index 9999)
+    heart.style.zIndex = Math.random() < 0.5 ? 1 : 9999;
+
+    document.body.appendChild(heart);
+
+    // Remove heart after it floats away
+    setTimeout(() => {
+      heart.remove();
+    }, 6000);
+  }, 500); // One heart every 0.5 seconds
+</script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Website - About</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: Times New Roman, sans-serif;
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background-color: yellow;
+      color: black;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      margin: 20px 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      background-color: #444;
+      padding: 10px 15px;
+      text-decoration: none;
+      margin: 0 5px;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h2 {
+      color: #ffcc00;
+    }
+    .about-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffcc00;
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>About Me</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="hobbies.html">Hobbies</a>
+  <a href="interests.html">Interests</a>
+  <a href="important_moments.html">Important Moments</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  
+  <!-- Profile Photo -->
+  <img src="smk.jpg" alt="SMK" class="about-photo">
+  <img src="zim.jpg" alt="ZIM" class="about-photo">
+  <img src="hospital.jpg" alt="Hospital" class="about-photo">
+
+  <!-- Description -->
+  <p>My name is Mohamad Hazim Bin Othman. I am a student from Library Informatics in UiTM Kedah.</p>
+  <p>I live in No.5 Jln Dm 1/2 Taman Desa Mas, Bandar Country Homes, Rawang, Selangor.</p>
+  <p>My age is 20 years old.</p>
+  <p>I was born on 30 November 2005 in Hospital Selayang, Selangor.</p>
+  <p>Since a child I am an ambivert person — I can be very loud and very quiet at the same time depending on the situation, which makes me unique.</p>
+</section>
+
+<footer>
+  <p>&copy; Hazim - <span id="year"></span></p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
